@@ -1,0 +1,4 @@
+*.bin
+jar/
+macros/lib
+macros/names
