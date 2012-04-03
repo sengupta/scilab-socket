@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<refentry version="5.0-subset Scilab" xml:id="SOCKET_pause" xml:lang="en"
+          xmlns="http://docbook.org/ns/docbook"
+          xmlns:xlink="http://www.w3.org/1999/xlink"
+          xmlns:svg="http://www.w3.org/2000/svg"
+          xmlns:ns3="http://www.w3.org/1999/xhtml"
+          xmlns:mml="http://www.w3.org/1998/Math/MathML"
+          xmlns:db="http://docbook.org/ns/docbook">
+  <info>
+    <pubdate>$LastChangedDate: 09-07-2009 $</pubdate>
+  </info>
+
+  <refnamediv>
+    <refname>SOCKET_pause</refname>
+
+    <refpurpose>Add a delay in your Scilab script</refpurpose>
+  </refnamediv>
+
+  <refsynopsisdiv>
+    <title>Calling Sequence</title>
+
+    <synopsis>SOCKET_pause(delay_s)</synopsis>
+  </refsynopsisdiv>
+
+  <refsection>
+    <title>Parameters</title>
+
+    <variablelist>
+      <varlistentry>
+        <term>delay_s</term>
+
+        <listitem>
+          <para>real. This is the delay you want add into your script.</para>
+        </listitem>
+      </varlistentry>
+    </variablelist>
+  </refsection>
+
+  <refsection>
+    <title>Description</title>
+
+    <para>This function creates a delay into your Scilab script.
+It could be usefull between a SOCKET_write() and SOCKET_read() functions.
+See the source code of SOCKET_query() for example.</para>
+  </refsection>
+
+  <refsection>
+    <title>Examples</title>
+
+    <programlisting role="example"><![CDATA[ 
+SOCKET_pause(2) // Stop the script during 2 seconds
+ ]]></programlisting>
+  </refsection>
+
+  <refsection>
+    <title>See Also</title>
+
+    <simplelist type="inline">
+      <member><link linkend="SOCKET_open">SOCKET_open</link></member>
+      <member><link linkend="SOCKET_write">SOCKET_write</link></member>
+      <member><link linkend="SOCKET_read">SOCKET_read</link></member>
+      <member><link linkend="SOCKET_query">SOCKET_query</link></member>
+      <member><link linkend="SOCKET_close">SOCKET_close</link></member>
+      <member><link linkend="SOCKET_pause">SOCKET_pause</link></member>
+    </simplelist>
+  </refsection>
+
+  <refsection>
+    <title>Authors</title>
+
+    <simplelist type="vert">
+      <member>Tibault REVEYRAND (http://www.reveyrand.fr).</member>
+    </simplelist>
+  </refsection>
+</refentry>

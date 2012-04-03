@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<refentry version="5.0-subset Scilab" xml:id="SOCKET_query" xml:lang="en"
+          xmlns="http://docbook.org/ns/docbook"
+          xmlns:xlink="http://www.w3.org/1999/xlink"
+          xmlns:svg="http://www.w3.org/2000/svg"
+          xmlns:ns3="http://www.w3.org/1999/xhtml"
+          xmlns:mml="http://www.w3.org/1998/Math/MathML"
+          xmlns:db="http://docbook.org/ns/docbook">
+  <info>
+    <pubdate>$LastChangedDate: 09-07-2009 $</pubdate>
+  </info>
+
+  <refnamediv>
+    <refname>SOCKET_query</refname>
+
+    <refpurpose>Query on an opened SOCKET Session</refpurpose>
+  </refnamediv>
+
+  <refsynopsisdiv>
+    <title>Calling Sequence</title>
+
+    <synopsis>mat = SOCKET_query(id,commande)</synopsis>
+  </refsynopsisdiv>
+
+  <refsection>
+    <title>Parameters</title>
+
+    <variablelist>
+      <varlistentry>
+        <term>id</term>
+
+        <listitem>
+          <para>specify the opened socket session you want to query. It's an integer.</para>
+        </listitem>
+      </varlistentry>
+
+      <varlistentry>
+        <term>commande</term>
+
+        <listitem>
+          <para>It's a string you want to send to the opened socket during the query.</para>
+        </listitem>
+      </varlistentry>
+
+      <varlistentry>
+        <term>mat</term>
+
+        <listitem>
+          <para>Matrix of string. This is the response of your query on the selected socket session.</para>
+        </listitem>
+      </varlistentry>
+    </variablelist>
+  </refsection>
+
+  <refsection>
+    <title>Description</title>
+
+    <para>This function enable to query a socket. This is just a combinaison of SOCKET_write() and SOCKET_read() functions.</para>
+  </refsection>
+
+  <refsection>
+    <title>Examples</title>
+
+    <programlisting role="example"><![CDATA[ 
+SOCKET_open(1,"10.0.0.1",23); // The session #1 is opened
+SOCKET_open(2,"10.0.0.2",23); // The session #2 is opened
+
+// Now we can communicate with devices...
+SOCKET_query(2,"help")
+SOCKET_query(1,"IP?")
+
+// TO close every WinSocket session...
+SOCKET_close(2);
+SOCKET_close(1);
+ ]]></programlisting>
+  </refsection>
+
+  <refsection>
+    <title>See Also</title>
+
+    <simplelist type="inline">
+      <member><link linkend="SOCKET_open">SOCKET_open</link></member>
+      <member><link linkend="SOCKET_write">SOCKET_write</link></member>
+      <member><link linkend="SOCKET_read">SOCKET_read</link></member>
+      <member><link linkend="SOCKET_query">SOCKET_query</link></member>
+      <member><link linkend="SOCKET_close">SOCKET_close</link></member>
+      <member><link linkend="SOCKET_pause">SOCKET_pause</link></member>
+    </simplelist>
+  </refsection>
+
+  <refsection>
+    <title>Authors</title>
+
+    <simplelist type="vert">
+      <member>Tibault REVEYRAND (http://www.reveyrand.fr).</member>
+    </simplelist>
+  </refsection>
+</refentry>

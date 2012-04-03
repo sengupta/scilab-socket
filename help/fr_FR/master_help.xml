@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE book [
+<!--Begin Entities-->
+<!ENTITY SOCKET_close SYSTEM "/home/collette/repositories/toolboxes_google/socket/help/en_US/SOCKET_close.xml">
+<!ENTITY SOCKET_init SYSTEM "/home/collette/repositories/toolboxes_google/socket/help/en_US/SOCKET_init.xml">
+<!ENTITY SOCKET_open SYSTEM "/home/collette/repositories/toolboxes_google/socket/help/en_US/SOCKET_open.xml">
+<!ENTITY SOCKET_pause SYSTEM "/home/collette/repositories/toolboxes_google/socket/help/en_US/SOCKET_pause.xml">
+<!ENTITY SOCKET_query SYSTEM "/home/collette/repositories/toolboxes_google/socket/help/en_US/SOCKET_query.xml">
+<!ENTITY SOCKET_read SYSTEM "/home/collette/repositories/toolboxes_google/socket/help/en_US/SOCKET_read.xml">
+<!ENTITY SOCKET_write SYSTEM "/home/collette/repositories/toolboxes_google/socket/help/en_US/SOCKET_write.xml">
+<!--End Entities-->
+]>
+<book version="5.0-subset Scilab" xml:lang="fr_FR"
+      xmlns="http://docbook.org/ns/docbook"
+      xmlns:xlink="http://www.w3.org/1999/xlink"
+      xmlns:xi="http://www.w3.org/2001/XInclude"
+      xmlns:svg="http://www.w3.org/2000/svg"
+      xmlns:mml="http://www.w3.org/1998/Math/MathML"
+      xmlns:html="http://www.w3.org/1999/xhtml"
+      xmlns:db="http://docbook.org/ns/docbook">
+  <info xml:id='socket_toolbox_manual'>
+    <title>Socket Toolbox</title>
+  </info>
+
+<part xml:id='section_efe0c75f250501883235695d9391779d'>
+<title>Socket Toolbox</title>
+&SOCKET_close;
+&SOCKET_init;
+&SOCKET_open;
+&SOCKET_pause;
+&SOCKET_query;
+&SOCKET_read;
+&SOCKET_write;
+</part>
+</book>

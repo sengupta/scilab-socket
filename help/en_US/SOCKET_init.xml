@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<refentry version="5.0-subset Scilab" xml:id="SOCKET_init" xml:lang="en"
+          xmlns="http://docbook.org/ns/docbook"
+          xmlns:xlink="http://www.w3.org/1999/xlink"
+          xmlns:svg="http://www.w3.org/2000/svg"
+          xmlns:ns3="http://www.w3.org/1999/xhtml"
+          xmlns:mml="http://www.w3.org/1998/Math/MathML"
+          xmlns:db="http://docbook.org/ns/docbook">
+  <info>
+    <pubdate>$LastChangedDate: 09-07-2009 $</pubdate>
+  </info>
+
+  <refnamediv>
+    <refname>SOCKET_init</refname>
+
+    <refpurpose>Display a message</refpurpose>
+  </refnamediv>
+
+  <refsynopsisdiv>
+    <title>Calling Sequence</title>
+
+    <synopsis>SOCKET_init()</synopsis>
+  </refsynopsisdiv>
+
+  <refsection>
+    <title>Description</title>
+
+    <para>Display a message indicating that the toolbox is loaded. This
+        function doesn't load the toolbox. You don't need to use this
+        function.</para>
+  </refsection>
+
+  <refsection>
+    <title>Examples</title>
+
+    <programlisting role="example"><![CDATA[ 
+SOCKET_init();
+
+// If you don't have a TCP-IP instrument right now, you can ckeck this toolbox
+
+SOCKET_open(1,"www.google.fr",80);
+disp(SOCKET_query(1,["GET / HTTP/1.0";""]));
+SOCKET_close(1);
+ ]]></programlisting>
+  </refsection>
+
+  <refsection>
+    <title>See Also</title>
+
+    <simplelist type="inline">
+      <member><link linkend="SOCKET_open">SOCKET_open</link></member>
+      <member><link linkend="SOCKET_write">SOCKET_write</link></member>
+      <member><link linkend="SOCKET_read">SOCKET_read</link></member>
+      <member><link linkend="SOCKET_query">SOCKET_query</link></member>
+      <member><link linkend="SOCKET_close">SOCKET_close</link></member>
+      <member><link linkend="SOCKET_pause">SOCKET_pause</link></member>
+    </simplelist>
+  </refsection>
+
+  <refsection>
+    <title>Authors</title>
+
+    <simplelist type="vert">
+      <member>Tibault REVEYRAND (http://www.reveyrand.fr).</member>
+    </simplelist>
+  </refsection>
+</refentry>

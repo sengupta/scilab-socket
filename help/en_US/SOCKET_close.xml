@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<refentry version="5.0-subset Scilab" xml:id="SOCKET_close" xml:lang="en"
+          xmlns="http://docbook.org/ns/docbook"
+          xmlns:xlink="http://www.w3.org/1999/xlink"
+          xmlns:svg="http://www.w3.org/2000/svg"
+          xmlns:ns3="http://www.w3.org/1999/xhtml"
+          xmlns:mml="http://www.w3.org/1998/Math/MathML"
+          xmlns:db="http://docbook.org/ns/docbook">
+  <info>
+    <pubdate>$LastChangedDate: 09-07-2009 $</pubdate>
+  </info>
+
+  <refnamediv>
+    <refname>SOCKET_close</refname>
+
+    <refpurpose>Close a Socket session</refpurpose>
+  </refnamediv>
+
+  <refsynopsisdiv>
+    <title>Calling Sequence</title>
+
+    <synopsis>SOCKET_close(id)</synopsis>
+  </refsynopsisdiv>
+
+  <refsection>
+    <title>Parameters</title>
+
+    <variablelist>
+      <varlistentry>
+        <term>id</term>
+
+        <listitem>
+          <para>The number of the session (Integer).</para>
+        </listitem>
+      </varlistentry>
+    </variablelist>
+  </refsection>
+
+  <refsection>
+    <title>Description</title>
+
+    <para>This instruction will close a socket session you have opened with SOCKET_open() function.</para>
+  </refsection>
+
+  <refsection>
+    <title>Examples</title>
+
+    <programlisting role="example"><![CDATA[ 
+SOCKET_open(1,"10.0.0.1",23); // The session #1 is opened
+SOCKET_open(2,"10.0.0.2",23); // The session #2 is opened
+
+// Now we can communicate with devices...
+SOCKET_query(2,"help")
+SOCKET_query(1,"IP?")
+
+// TO close every WinSocket session...
+SOCKET_close(2);
+SOCKET_close(1);
+ ]]></programlisting>
+  </refsection>
+
+  <refsection>
+    <title>See Also</title>
+
+    <simplelist type="inline">
+      <member><link linkend="SOCKET_open">SOCKET_open</link></member>
+      <member><link linkend="SOCKET_write">SOCKET_write</link></member>
+      <member><link linkend="SOCKET_read">SOCKET_read</link></member>
+      <member><link linkend="SOCKET_query">SOCKET_query</link></member>
+      <member><link linkend="SOCKET_close">SOCKET_close</link></member>
+      <member><link linkend="SOCKET_pause">SOCKET_pause</link></member>
+    </simplelist>
+  </refsection>
+
+  <refsection>
+    <title>Authors</title>
+
+    <simplelist type="vert">
+      <member>Tibault REVEYRAND (http://www.reveyrand.fr).</member>
+    </simplelist>
+  </refsection>
+</refentry>

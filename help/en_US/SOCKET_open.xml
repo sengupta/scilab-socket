@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<refentry version="5.0-subset Scilab" xml:id="SOCKET_open" xml:lang="en"
+          xmlns="http://docbook.org/ns/docbook"
+          xmlns:xlink="http://www.w3.org/1999/xlink"
+          xmlns:svg="http://www.w3.org/2000/svg"
+          xmlns:ns3="http://www.w3.org/1999/xhtml"
+          xmlns:mml="http://www.w3.org/1998/Math/MathML"
+          xmlns:db="http://docbook.org/ns/docbook">
+  <info>
+    <pubdate>$LastChangedDate: 09-07-2009 $</pubdate>
+  </info>
+
+  <refnamediv>
+    <refname>SOCKET_open</refname>
+
+    <refpurpose>Open a SOCKET Session</refpurpose>
+  </refnamediv>
+
+  <refsynopsisdiv>
+    <title>Calling Sequence</title>
+
+    <synopsis>SOCKET_open(id,adress,port)</synopsis>
+  </refsynopsisdiv>
+
+  <refsection>
+    <title>Parameters</title>
+
+    <variablelist>
+      <varlistentry>
+        <term>id</term>
+
+        <listitem>
+          <para>id is an integer. This is the number of your socket session.</para>
+        </listitem>
+      </varlistentry>
+
+      <varlistentry>
+        <term>adress</term>
+
+        <listitem>
+          <para>This is the IP adress as a character string of the device you want to connect with.</para>
+        </listitem>
+      </varlistentry>
+
+      <varlistentry>
+        <term>port</term>
+
+        <listitem>
+          <para>This is an integer. It is the port you want to connect with.</para>
+        </listitem>
+      </varlistentry>
+    </variablelist>
+  </refsection>
+
+  <refsection>
+    <title>Description</title>
+
+    <para>This function open a new socket session. If the session has been opened before, the former session is closed.</para>
+  </refsection>
+
+  <refsection>
+    <title>Examples</title>
+
+    <programlisting role="example"><![CDATA[ 
+SOCKET_open(1,"10.0.0.1",23); // The session #1 is opened
+SOCKET_open(2,"10.0.0.2",23); // The session #2 is opened
+
+// Now we can communicate with devices...
+SOCKET_query(2,"help")
+SOCKET_query(1,"IP?")
+
+// TO close every WinSocket session...
+SOCKET_close(2);
+SOCKET_close(1);
+ ]]></programlisting>
+  </refsection>
+
+  <refsection>
+    <title>See Also</title>
+
+    <simplelist type="inline">
+      <member><link linkend="SOCKET_open">SOCKET_open</link></member>
+      <member><link linkend="SOCKET_write">SOCKET_write</link></member>
+      <member><link linkend="SOCKET_read">SOCKET_read</link></member>
+      <member><link linkend="SOCKET_query">SOCKET_query</link></member>
+      <member><link linkend="SOCKET_close">SOCKET_close</link></member>
+      <member><link linkend="SOCKET_pause">SOCKET_pause</link></member>
+    </simplelist>
+  </refsection>
+
+  <refsection>
+    <title>Authors</title>
+
+    <simplelist type="vert">
+      <member>Tibault REVEYRAND (http://www.reveyrand.fr).</member>
+    </simplelist>
+  </refsection>
+</refentry>
